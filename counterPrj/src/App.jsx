@@ -10,8 +10,11 @@ function App() {
     console.log('clicked', counter);
     
     // counter = counter+1  //ui updation ko react control karta hai
-    setCounter(counter+1)
-
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)  //multiple functions lagaane k baad bhi counter sirf 1 hi increase karega
+                            //this is due to useState() because this function pass the elements in batches
   }
   const removeValue = () =>{
     console.log('clicked', counter);
